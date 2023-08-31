@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700;800;900&family=Lexend+Deca:wght@400;500;600;700;800;900&family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,600;6..12,700;6..12,800;6..12,900&family=Urbanist:wght@200;300;400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Kanit', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    background-color: #ebebeb;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    margin: 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 8px 32px 0 rgba(255, 220, 207, 0.37);
+    backdrop-filter: blur( 20px );
+    -webkit-backdrop-filter: blur( 20px );
+    border-radius: 3px;
+    border: 1px transparent rgba(255, 187, 160, 0.37);
+}
+
+input {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+  }
+
+button {
+    width: 100%;
+    padding: 10px 0px;
+    margin-top: 8px;
+    background-color: #ffffff;
+    color: #000;
+    box-shadow: 0 8px 32px 0 rgba(255, 220, 207, 0.37);
+    backdrop-filter: blur( 20px );
+    -webkit-backdrop-filter: blur( 20px );
+    border-radius: 3px;
+    border: 1px transparent;
+}
+
+/* button:hover {
+    opacity: 80%;
+    color: red;
+} */
+
+button::before,
+button::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  display: block;
+  background-color: deeppink;
+  transition: all 250ms ease-in-out;
+}
+
+button:hover{
+    opacity: 90%;
+    color: red;
+    cursor: pointer;
+}
