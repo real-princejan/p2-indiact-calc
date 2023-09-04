@@ -40,18 +40,26 @@ const Calc = () => {
   };
 
   return (
+    <>
+    <h2>React Calculator</h2>
     <div className='buttons'>
       <input type="text" value={num1} onChange={handleNum1Change} placeholder='Input 1st number' />
       <input type="text" value={num2} onChange={handleNum2Change} placeholder='Input 2nd number' />
       
-      <button onClick={handleAdd}>Add</button>
-      <button onClick={handleSubtract}>Subtract</button>
-      <button onClick={handleMultiply}>Multiply</button>
-      <button onClick={handleDivide}>Divide</button>
+      <button onClick={handleAdd}>Add +</button>
+      <button onClick={handleSubtract}>Subtract -</button>
+      <button onClick={handleMultiply}>Multiply *</button>
+      <button onClick={handleDivide}>Divide /</button>
       
-      <h1>{result}</h1>
+      <div className="result">
+        <p>Result:</p>
+          <h1>{result}</h1>
+      </div>
+
     </div>
+    </>
   );
 };
+
 
 export default Calc;

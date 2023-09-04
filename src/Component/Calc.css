@@ -8,64 +8,94 @@
 
 body{
     min-height: 100vh;
-    background-color: #ebebeb;
-    color: black;
+    font-family: sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-image: linear-gradient(to right, #1d1d1d, #181818);
+  }
+
+h2{
+    color: maroon;
+    font-weight: lighter;
 }
 
 h1{
-    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
     text-align: center;
-    background: rgba(255, 255, 255, 0.7);
-    box-shadow: 0 8px 32px 0 rgba(255, 220, 207, 0.37);
-    backdrop-filter: blur( 20px );
-    -webkit-backdrop-filter: blur( 20px );
-    border-radius: 3px;
-    border: 1px transparent rgba(255, 187, 160, 0.37);
+    font-size: 40px;
 }
 
 input {
     width: 100%;
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-  }
-
-button {
-    width: 100%;
     padding: 10px 0px;
-    margin-top: 8px;
-    background-color: #ffffff;
-    color: #000;
-    box-shadow: 0 8px 32px 0 rgba(255, 220, 207, 0.37);
+    margin-top: 10px;
+    text-align: center;
+    background-color: #1d1d1d;
+    color: #c0c0c0;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     backdrop-filter: blur( 20px );
     -webkit-backdrop-filter: blur( 20px );
-    border-radius: 3px;
+    border: 1px transparent;
+  }
+
+.buttons{
+    border: 8px solid;
+    box-shadow: 8px 9px 0 2px rgb(255, 255, 255);
+    backdrop-filter: blur( 4px );
+    border-radius: 10px;
+}
+
+.result{
+    font-weight: initial;
+    margin: 10px;
+    text-align: left;
+    font-size: 30px;
+    color: #bebebe;
+}
+
+button {
+    width: 50%;
+    padding: 10px 0px;
+    margin-top: 20px;
+    background-color: #1d1d1d;
+    color: #ffffff;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur( 20px );
+    -webkit-backdrop-filter: blur( 20px );
+    border-radius: 9999px;
     border: 1px transparent;
 }
 
-/* button:hover {
-    opacity: 80%;
-    color: red;
-} */
-
-button::before,
-button::after {
-  position: absolute;
-  top: 0;
-  left: 0;
-  content: '';
-  display: block;
-  background-color: deeppink;
-  transition: all 250ms ease-in-out;
-}
-
 button:hover{
-    opacity: 90%;
+    opacity: 70%;
     color: red;
     cursor: pointer;
 }
+
+.result h1{
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid #bebebe; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #bebebe; }
+  }
